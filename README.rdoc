@@ -1,28 +1,26 @@
-== README
+# Quick_Weather.ly
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a quick weather app built in Rails. It makes use of the `figaro` and `httparty` gems to make server side API calls.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
+1. Fork or Clone this repository.
 
-* System dependencies
+2. Run the following commands in the terminal
 
-* Configuration
+```bash
+$ bundle install
+$ bundle exec figaro install
+```
 
-* Database creation
+Update your `config/application.yml`(must have a [weather underground API](http://www.wunderground.com/weather/api/) key):
 
-* Database initialization
+```yml
+wunderground_api_key: "f28a93cae85945b6"
+```
 
-* How to run the test suite
+Start rails server
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```bash
+$ rails s
+```
